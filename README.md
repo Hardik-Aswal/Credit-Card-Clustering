@@ -64,7 +64,8 @@ In this section we will perform K-Means clustering on the data and check the clu
 
 First, we make the inertia plot:
 
-![inertia](pictures/inertia.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/8a64458a-cce1-4831-a17d-10c25b6cdca2)
+
 
 Using the elbow method, we pick a good number of clusters to be 6.
 
@@ -82,15 +83,20 @@ We will now check the silhouette scores for different numbers of clusters.
 
 Silhouette plots:
 
-![s2](pictures/silhouette_2.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/b244559f-dc76-4b4d-ac23-0952ace2d021)
 
-![s3](pictures/silhouette_3.png)
 
-![s4](pictures/silhouette_4.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/3455ced8-4e20-4c5f-8204-3be71f5c6775)
 
-![s5](pictures/silhouette_5.png)
 
-![s6](pictures/silhouette_6.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/da517dd3-b6cf-494c-816f-4c98a5992a83)
+
+
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/9020eb4a-07a6-4d62-80dd-6adc17961eff)
+
+
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/bd7b93ba-ea48-4b7b-a22e-8a0448e446fa)
+
 
 So far, we have a high average inertia, low silhouette scores, and very wide fluctuations in the size of the silhouette plots. This is not good. Let's apply feature extraction with PCA to improve clustering.
 
@@ -127,36 +133,42 @@ As you can see, 2 PCA components with 5-6 clusters would be our best bet.
 
 ## Visualization
 
-![km](pictures/kmeans.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/eae6fec7-60f9-45d3-9c3d-09de522556c2)
+
 
 So far, by applying PCA we have made notable improvement to KMeans model. Let's try other clustering models as well!
 
 ## Agglomerative Hierarchical Clustering with PCA
 
-![agg](pictures/agg.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/344d2f08-bb73-4f3e-8441-3c0a1160c4b5)
+
 
 ## Gaussian Mixture Clustering with PCA
 
-![gm](pictures/gm.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/0b5331b8-eb5c-4d4a-93d6-e50cd0120536)
+
 
 
 # Exploratory Data Analysis
 
 We are picking 6 clusters for this EDA. Let's make a Seaborn pairplot with selected/best columns to show how the clusters are segmenting the samples:
 
-![pairgrid](pictures/pairgrid.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/2ed95ebb-c732-4e65-81d8-f4c5750729a9)
+
 
 We can see some interesting correlations between features and clusters that we have made above. Let's get into detailed analysis.
 
 ## Cluster 0 (Blue): The Average Joe
 
-![c0](pictures/cluster_0.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/61ee6f94-fae6-4b6d-87d8-52f8c68cc1cb)
+
 
 This group of users, while having the highest number of users by far, is fairly frugal: they have lowest purchases, second lowest payments, and lowest credit limit. The bank would not make much profit from this group, so there should be some sorts of strategy to attract these people more.
 
 ## Cluster 1 (Orange): The Active Users
 
-![c1](pictures/cluster_1.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/676bbc07-b8a1-4268-aecf-ba486abdce49)
+
 
 This group of users is very active in general: they have second highest purchases, third highest payments, and the most varied credit limit values. This type of credit card users is the type you should spend the least time and effort on, as they are already the ideal one.
 
@@ -164,27 +176,32 @@ This group of users is very active in general: they have second highest purchase
 
 The Big Spenders. This group is by far the most interesting to analyze, since they do not only have the highest number of purchases, highest payments, highest minimum payments, but the other features are also wildly varied in values. Let's take a quick look at the pairplots.
 
-![c21](pictures/cluster_21.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/367407f5-165b-4c1f-80ae-46a81be2f56d)
+
 
 As a nature of "Big Spenders", there are many outliers in this cluster: people who have/make abnormally high balance, purchases, cash advance, and payment. The graph below will give you an impression of how outlier-heavy this cluster is - almost all the green dots are outliers relatively compared to the rest of the whole dataset.
 
-![c22](pictures/cluster_22.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/47a3f71f-37b5-4ed6-8052-bcdcfe210443)
+
 
 ## Cluster 3 (Red): The Money Borrowers
 
-![c3](pictures/cluster_3.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/2f336af1-674b-42d9-8a19-eae71b4cd9fd)
+
 
 Wildly varied balance, second highest payments, average purchases. The special thing about this cluster is that these people have the highest cash advance by far - there is even one extreme case that has like 25 cash advance points. We call these people "The Money Borrowers".
 
 ## Cluster 4 (Purple): The High Riskers
 
-![c4](pictures/cluster_4.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/d8f0cf26-3247-4e51-9d32-07a7f0d0f639)
+
 
 This group has absurdly high minimum payments while having the second lowest credit limit. It looks like the bank has identified them as higher risk.
 
 ## Cluster 5 (Brown): The Wildcards
 
-![c5](pictures/cluster_5.png)
+![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/44848063-fdb8-4492-a67e-383fb167786b)
+
 
 This group is troublesome to analyze and to come up with a good marketing strategy towards, as both their credit limit and balance values are wildly varied. As you can see, the above graph looks like half of it was made of the color brown!
 
