@@ -1,6 +1,6 @@
 # Credit Card Clustering
 
-![Header](pictures/header_cc.png)
+![Header](pictures/header_cc.png![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/0a3b668a-e870-4d80-9137-5b752270c047)
 
 The sample Dataset summarizes the usage behavior of about 9000 active credit card holders during the last 6 months. The file is at a customer level with 18 behavioral variables. You need to develop a customer segmentation to define marketing strategy from the dataset.
 
