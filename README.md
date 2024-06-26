@@ -1,6 +1,7 @@
 # Credit Card Clustering
 
-![Header](pictures/header_cc.png![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/0a3b668a-e870-4d80-9137-5b752270c047)
+![Header](![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/221fd26c-7e1f-4e2a-936e-5719f199a688)
+)
 
 The sample Dataset summarizes the usage behavior of about 9000 active credit card holders during the last 6 months. The file is at a customer level with 18 behavioral variables. You need to develop a customer segmentation to define marketing strategy from the dataset.
 
@@ -51,7 +52,8 @@ One of the most important preprocessing steps in a Data Science project. In this
 
 ## Correlation Check
 
-![heatmap](![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/974924c8-5a2d-4e70-884f-bd34dfb32531)
+![heatmap](![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/7366a5fc-588b-4121-8ada-1afee466ef5a)
+
 )
 
 ## Clustering using K-Means
