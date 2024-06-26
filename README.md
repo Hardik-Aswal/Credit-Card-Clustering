@@ -51,7 +51,8 @@ One of the most important preprocessing steps in a Data Science project. In this
 
 ## Correlation Check
 
-![heatmap](pictures/heatmap_cc.png)
+![heatmap](![image](https://github.com/Hardik-Aswal/Credit-Card-Clustering/assets/137987162/974924c8-5a2d-4e70-884f-bd34dfb32531)
+)
 
 ## Clustering using K-Means
 
